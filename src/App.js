@@ -1,12 +1,19 @@
-import React from "react";
-import SubirImagen from "./SubirImagen"; 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./Navbar";
+import Home from "./Home";
+import Contacto from "./Contacto";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Trabajo Práctico</h1>
-      <SubirImagen /> 
-    </div>
+    <Router>
+      <Navbar />
+      <div className="App" style={{ padding: "20px" }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contacto" element={<Contacto />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
