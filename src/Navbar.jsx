@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <nav style={{
       padding: "15px",
-      background: "#2c3e50",   // Fondo oscuro
+      background: "#2c3e50",  
       display: "flex",
       justifyContent: "center",
       gap: "20px"
@@ -27,6 +27,14 @@ function Navbar() {
       >
         Contacto
       </Link>
+
+      <Link
+        to="/api"
+        style={{ color:"white", textDecoration: "none", fontWeight:"bold"}}
+        >
+          API
+      </Link>
+
     </nav>
   );
 }
