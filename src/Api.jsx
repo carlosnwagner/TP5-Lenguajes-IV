@@ -5,7 +5,6 @@ function Api() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // API pública sin registro: obtiene cotizaciones desde USD
     fetch("https://open.er-api.com/v6/latest/USD")
       .then((res) => {
         if (!res.ok) throw new Error("Error al obtener datos de la API");
@@ -39,7 +38,7 @@ function Api() {
 
   return (
     <div style={{ textAlign: "center", marginTop: "20px" }}>
-      <h1>💱 Cotización de Monedas</h1>
+      <h1>Cotización de Monedas</h1>
       <h3>Base: {data.base_code}</h3>
       <p><strong>Fecha de actualización:</strong> {new Date(data.time_last_update_utc).toLocaleString()}</p>
 

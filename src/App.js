@@ -7,7 +7,6 @@ import Servicios from "./Servicios";
 
 function App() {
   return (
-    // 👇 Aca se agrega el basename para GitHub Pages
     <Router basename="/TP5-Lenguajes-IV">
       <Navbar />
       <div className="App" style={{ padding: "20px" }}>
